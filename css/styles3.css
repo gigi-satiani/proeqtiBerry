@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ede5e5;
+    width: 100%;
+    border: 2px solid black;
+}
+/*----------------- header navigation ---------------*/
+
+header {
+    /* border: 1px solid rgb(6, 9, 95); */
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+header .backArrow {
+    /* border: 1px solid red; */
+    width: 5%;
+}
+.backArrow img {
+    float: right;
+    width: 50%;
+    cursor: pointer;
+}
+.navContainer {
+    /* border: 1px solid rgb(17, 215, 13); */
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+.navContainer span {
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+}
+.pageNumber {
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .navContainer :nth-child(1) {
+        display: none;
+    }
+    .navContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pageNumber {
+        display: block;
+        font-weight: lighter;
+        color: gray;
+    }
+    .backArrow img {
+        width: 100%;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+}
+
+/*----------------- main container. picture upload div -------------*/
+
+main {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #ede5e5;
+}
+@media screen and (min-width: 1200px) {
+    form {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px 140px;
+    }
+}
+form {
+    /* border: 1px solid green; */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.pictureUploadDiv {
+    border: 2px dashed #4386A9;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.pictureUploadDiv a {
+    margin-top: 100px;
+    text-decoration: none;
+    color: #4386A9;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+.pictureUploadDiv a label {
+    cursor: pointer;
+    word-spacing: 5px;
+    line-height: 25px;
+}
+.uploadBtn {
+    margin-top: 70px;
+    width: 30%;
+    height: 60px;
+    background-color: #62A1EB;
+    border-radius: 8px;
+    border: none;
+    color: #ede5e5;
+    padding: 15px 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+@media screen and (max-width: 700px) {
+    .pictureUploadDiv {
+        width: 100%;
+    }
+    html, body, main {
+        background-color: #fff;
+    }
+    form {
+        width: 90%;
+    }
+}
+
+.nameAndBrand {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    gap:40px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.nameAndBrand label {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 800;
+    text-align: right;
+    /* border: 1px solid rgb(28, 170, 49); */
+    width: fit-content;
+    margin-top: 20px;
+}
+.deviceNameInput {
+    border: 2px solid #62A1EB;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 12px;
+}
+.laptopName {
+    /* border: 2px solid rgb(9, 12, 176); */
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+}
+
+.cpuBrandDiv {
+    display:flex;
+    gap:30px;
+    align-items: center;
+}
+.nameAndBrand span {
+    /* border: 1px solid red; */
+    text-align: left;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+ select {
+    display:flex;
+    flex: 1;
+    height: 50px;
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+    background-color: #e4dcdc;
+    /* border: 1px solid red; */
+}
+@media screen and (max-width: 1200px) {
+    .uploadBtn {
+        width: 40%;
+    }
+
+    .nameAndBrand select {
+        width: 30%;
+    }
+    .laptopName {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .nameAndBrand select {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .nameAndBrand {
+        display: block;
+    }
+    .laptopName {
+        width: 100%;
+    }
+    .nameAndBrand select {
+        width: 100%;
+    }
+    .deviceNameInput {
+        width: 100%;
+    }
+}
+.cpuBrandDiv {
+    margin-top: 50px;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+@media screen and (max-width: 600px) {
+    .cpuBrandDiv {
+        flex-direction: column;
+    }
+    .cpuSelect, .cpuCoreCount, .cpuFlow {
+        width: 100%;
+    }
+}
+.cpuSelect {
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+}
+.cpuCoreCount {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    text-align: left;
+}
+.cpuCoreCount label {
+    font-size: 17px;
+    font-weight: bold;
+}
+.cpuCoreCount span {
+    font-size: 12px;
+    font-weight: 400;
+}
+.cpuFlow {
+    /* border: 1px solid red; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+}
+.cpuFlow label {
+    font-size: 17px;
+    font-weight: bold;
+}
+.cpuFlow span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.ramAndMemory {
+    border: 1px solid red;
+    /* width: 100%; */
+    display: flex;
+    margin-top: 50px;
+}
+.laptopRam {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+}
+.laptopRam label {
+    font-size: 17px;
+    font-weight: bold;
+}
+.laptopRam span {
+    font-size: 12px;
+    font-weight: 400;
+}
+/* ----------radio button---------- */
+.memoryType {
+    border: 1px solid darkblue;
+}

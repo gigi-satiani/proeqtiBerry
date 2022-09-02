@@ -3,142 +3,208 @@
     padding: 0;
     box-sizing: border-box;
 }
-body, html {
-    background-color: #fbf8f8;
-    width: 100%;
-    height: 100vh;
+body {
+    background-color: #fff;
 }
+
 .backArrow {
-    /* border: 1px solid red; */
     position: absolute;
     top: 20px;
     left: 25px;
     cursor: pointer;
 }
+.logo2 {
+    display: none;
+}
+
+.underline::after {
+    display: block;
+    content: '';
+     width: 80%;
+     height: 2px;
+     background: black;
+     position: absolute;
+     bottom: -7px;
+     left: 0;
+     margin-left: 20px;
+   }
+   
+   .underline {
+   position: relative;  
+   }
+
+header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+}
+.pageNumber {
+    display: none;
+}
 
 .navContainer {
-    /* border: 1px solid red; */
     font-size: 10px;
     display: flex;
     justify-content: center;
     gap: 45px;
-    margin-top: 40px;
-    /* min-width: 550px; */
+    text-align: center;
 }
+
+
 .navContainer span {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     font-family: Helvetica, sans-serif;
-    /* content: "";
-    padding-top: 20px;
-    border-bottom: 1px solid black;
-    padding: 10px; */
 }
 .commonInput label {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bold;
 }
-.userDiv {
-    /* border: 1px solid black; */
-     max-width: 1200px; /* ----- es px tu % tu vh --------*/
-    background-color: #fff;
-    margin: 0 auto;
-}
-.parent {
+main {
+    /* border: 3px solid black; */
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F7F7F7;
+   
 }
 form {
-    padding: 80px 100px;
+    width: 70%;
+    /* border: 3px solid brown; */
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
 }
-.userDiv .commonInput input {
-    /* width: 50%; */
-    border: 1px solid red;
-    width: 330px;
-    height: 50px;
+.parent {
+    /* border: 3px solid green; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px 20px;
+}
+.nameSurname {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    gap: 30px;
+}
+
+.commonInput input {
     border-radius: 8px;
     border-color: #8AC0E2;
+    padding: 15px;
     margin-top: 10px;
-    padding: 10px;
 }
-.userDiv span {
-    font-size: 13px;
+main span {
+    font-size: 12px;
     margin-top: 4px;
     font-family: Helvetica, sans-serif;
     font-weight: 300;
 }
-.userDiv .commonInput {
-    /* border: 1px solid red; */
+.commonInput {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
+/*------------- team and position ----------*/
+
+
+.teamAndPosition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.mailAndNum {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .selectTeam {
-    flex-basis: 78%;
-    margin-top: 50px;
-    height: 60px;
     border-radius: 5px;
     border: none;
     background-color: #e9e1e1;
-    padding: 10px;
-    line-height: 10px;
+    padding: 18px;
 }
+
 .selectPos {
-    flex-basis: 78%;
-    margin-top: 60px;
-    height: 60px;
     border-radius: 5px;
     border: none;
     background-color: #e9e1e1;
-    padding: 10px;
+    padding: 18px;
 }
 .forMailLabel {
-   flex: 1;
-   flex-basis: 100%;
-   margin: 50px 0 10px 110px;
    font-weight: bold;
    font-family: Helvetica, sans-serif;
    font-size: 18px;
+   margin-top: 20px;
 }
 .selectMail {
-    flex-basis: 78%;
-    height: 60px;
     border-radius: 10px;
     border: none;
     background-color: #eae4e4;
     border: 2px solid #8AC0E2;
-    padding: 10px;
+    padding: 17px;
     box-shadow: none;
 }
-.selectMailSpan {
-    width: 78%;
+.selectMailSpanMobile {
+    display: none;
 }
+
 .buttonNext {
     border: none;
-    width: 15%;
+    width: 130px;
     height: 50px;
     background-color: #62A1EB;
     color: white;
     border-radius: 8px;
     cursor: pointer;
-    margin: 70px 0 0 640px;
+    /* margin: 70px 0 0 640px; */
     font-family: Helvetica, sans-serif;
     font-size: 20px;
+    align-self: flex-end;
+    margin-top: 30px;
 }
 .logoFigure {
-    /* border: 1px solid red; */
     text-align: center;
+    background-color: #F7F7F7;
+}
+.logoImage {
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 740px) {
-    body, html {
-        background: white;
+    .logo2 {
+        display: block;
     }
+    .logo1 {
+        display: none;
+    }
+    form {
+        width: 100%;
+    }
+
 }
 @media screen and (max-width: 900px) {
-    .userDiv {
+    .nameSurname {
+        flex-direction: column;
+    }
+    .navContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .underline::after {
+        height: 0px;
+    }
+    main {
         width: 100%;
     }
     .parent {
@@ -147,30 +213,27 @@ form {
     .selectTeam, .selectPos {
         width: 100%;
     }
-    .commonInput {
-        margin-top: 30px;
-    }
     .logoFigure {
         display: none;
     }
     .laptopInfo {
         display: none;
     }
-    .forMailLabel {
-        margin-left: 30px;
+    .workerInfo {
+        display: flex;
+        flex: 1;
     }
-    .userDiv .commonInput input {
-        width: 100%;
+    .pageNumber {
+        display: flex;
+        flex: 2;
     }
     .selectMailSpan {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 620px) {
-    .selectTeam, .selectPos, .selectMail {
-        flex-basis: 100%;
-    }
-    .buttonNext {
         display: none;
+    }
+    .selectMailSpanMobile {
+        display: block;
+    }
+    .showSpan {
+        display: block;
     }
 }

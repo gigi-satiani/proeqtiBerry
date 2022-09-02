@@ -4,21 +4,38 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #ede5e5;
-    width: 100%;
-    border: 2px solid black;
+    background-color: #F7F7F7;
 }
 /*----------------- header navigation ---------------*/
 
-header {
-    /* border: 1px solid rgb(6, 9, 95); */
-    display: flex;
+.sectionDiv {
+    /* border: 2px solid red; */
     width: 100%;
-    margin-top: 50px;
+    padding: 5px 20px;
+    margin: 10px;
+    border-radius: 14px;
 }
+/* form :nth-child(2) {
+    background-color: rgb(185, 7, 7);
+} */
+.thirdDiv {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+header {
+    display: flex;
+    height: 120px;
+    background-color: #F7F7F7;
+}
+.logo2 {
+    display: none;
+}
+
 header .backArrow {
-    /* border: 1px solid red; */
     width: 5%;
+    padding: 25px 2px;
 }
 .backArrow img {
     float: right;
@@ -26,7 +43,6 @@ header .backArrow {
     cursor: pointer;
 }
 .navContainer {
-    /* border: 1px solid rgb(17, 215, 13); */
     width: 95%;
     display: flex;
     align-items: center;
@@ -42,50 +58,36 @@ header .backArrow {
 .pageNumber {
     display: none;
 }
-@media screen and (max-width: 700px) {
-    .navContainer :nth-child(1) {
-        display: none;
-    }
-    .navContainer {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .pageNumber {
-        display: block;
-        font-weight: lighter;
-        color: gray;
-    }
-    .backArrow img {
-        width: 100%;
-        font-size: 30px;
-        font-weight: bolder;
-    }
-}
+.underline::after {
+    display: block;
+    content: '';
+     width: 80%;
+     height: 2px;
+     background: black;
+     position: absolute;
+     bottom: -7px;
+     left: 0;
+     margin-left: 20px;
+   }
+   
+   .underline {
+   position: relative;  
+   }
 
 /*----------------- main container. picture upload div -------------*/
 
 main {
-    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    background-color: #ede5e5;
 }
-@media screen and (min-width: 1200px) {
-    form {
-        width: 100%;
-        max-width: 1200px;
-        padding: 20px 140px;
-    }
-}
+
 form {
-    /* border: 1px solid green; */
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #fff;
 }
 .pictureUploadDiv {
     border: 2px dashed #4386A9;
@@ -95,7 +97,6 @@ form {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: 50px;
 }
 .pictureUploadDiv a {
     margin-top: 100px;
@@ -110,27 +111,18 @@ form {
     line-height: 25px;
 }
 .uploadBtn {
-    margin-top: 70px;
-    width: 30%;
+    margin-top: 60px;
+    width: 20%;
     height: 60px;
     background-color: #62A1EB;
     border-radius: 8px;
     border: none;
     color: #ede5e5;
-    padding: 15px 40px;
     cursor: pointer;
     font-size: 20px;
 }
-@media screen and (max-width: 700px) {
-    .pictureUploadDiv {
-        width: 100%;
-    }
-    html, body, main {
-        background-color: #fff;
-    }
-    form {
-        width: 90%;
-    }
+.uploadPic {
+    display: none;
 }
 
 .nameAndBrand {
@@ -139,7 +131,7 @@ form {
     display: flex;
     gap:40px;
     justify-content: space-between;
-    margin-top: 50px;
+    margin: 30px 0 30px 0;
 }
 .nameAndBrand label {
     font-size: 17px;
@@ -185,50 +177,13 @@ form {
     background-color: #e4dcdc;
     /* border: 1px solid red; */
 }
-@media screen and (max-width: 1200px) {
-    .uploadBtn {
-        width: 40%;
-    }
 
-    .nameAndBrand select {
-        width: 30%;
-    }
-    .laptopName {
-        width: 45%;
-    }
-}
-@media screen and (max-width: 850px) {
-    .nameAndBrand select {
-        width: 40%;
-    }
-}
-@media screen and (max-width: 700px) {
-    .nameAndBrand {
-        display: block;
-    }
-    .laptopName {
-        width: 100%;
-    }
-    .nameAndBrand select {
-        width: 100%;
-    }
-    .deviceNameInput {
-        width: 100%;
-    }
-}
 .cpuBrandDiv {
     margin-top: 50px;
     /* border: 1px solid red; */
     width: 100%;
 }
-@media screen and (max-width: 600px) {
-    .cpuBrandDiv {
-        flex-direction: column;
-    }
-    .cpuSelect, .cpuCoreCount, .cpuFlow {
-        width: 100%;
-    }
-}
+
 .cpuSelect {
     display: flex;
     flex: 1;
@@ -244,6 +199,7 @@ form {
 .cpuCoreCount label {
     font-size: 17px;
     font-weight: bold;
+    font-family: Helvetica, sans-serif;
 }
 .cpuCoreCount span {
     font-size: 12px;
@@ -268,10 +224,12 @@ form {
 
 
 .ramAndMemory {
-    border: 1px solid red;
-    /* width: 100%; */
+    /* border: 1px solid red; */
+    width: 100%;
     display: flex;
-    margin-top: 50px;
+    margin: 30px 0 30px 0;
+    align-self: flex-start;
+    gap: 50px;
 }
 .laptopRam {
     display: flex;
@@ -281,9 +239,16 @@ form {
     text-align: left;
     font-family: Helvetica, sans-serif;
 }
+.laptopRamInput {
+    border: 2px solid #62A1EB;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 12px;
+}
 .laptopRam label {
     font-size: 17px;
     font-weight: bold;
+    font-family: Helvetica, sans-serif;
 }
 .laptopRam span {
     font-size: 12px;
@@ -291,5 +256,240 @@ form {
 }
 /* ----------radio button---------- */
 .memoryType {
-    border: 1px solid darkblue;
+    /* border: 1px solid darkblue; */
+    flex: 1;
+    text-align: left;
+    word-spacing: 5px;
+}
+.memoryTypeLabel {
+    font-size: 17px;
+    font-weight: bold;
+    /* border: 1px solid red; */
+    display: flex;
+    height: 50px;
+}
+.memoryType label {
+    font-family: Helvetica, sans-serif;
+}
+.memoryType .radioBtnTwo {
+    margin-left: 10px;
+}
+
+
+
+.dateAndPrice {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    align-self: flex-start;
+    gap: 50px;
+}
+.purchaseDate {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+}
+.purchaseDate input {
+    border: 2px solid #62A1EB;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: Helvetica, sans-serif;
+}
+.purchaseDate label {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}
+.laptopPrice {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+}
+.laptopPrice span {
+    font-size: 12px;
+    font-weight: 400;
+}
+.laptopPrice label {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+.laptopStatus {
+    /* border: 1px solid red; */
+    text-align: left;
+    flex: 1;
+    word-spacing: 5px;
+    width: 100%;
+    margin-top: 20px;
+    line-height: 40px;
+}
+.laptopStatusLabel {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    /* border: 1px solid rgb(18, 15, 15); */
+    display: flex;
+}
+.laptopStatus input {
+    border: 2px solid #62A1EB;
+    color: #62A1EB;
+}
+
+
+
+.backAndSave {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 50px 0;
+    align-items: center;
+}
+.backBtn {
+    background-color: #FFFFFF;
+    color: #62A1EB;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+.saveBtn {
+    /* border: 2px solid rgb(0, 0, 0); */
+    background-color: #62A1EB;
+    font-family: Helvetica, sans-serif;
+    padding: 14px 27px;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+
+.logoFigure {
+    text-align: center;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+}
+.logoFigure img {
+    width: 4%;
+}
+
+/*------------------ media styles --------------*/
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+    .navContainer :nth-child(1), hr, .logoFigure, .logo1 {
+        display: none;
+    }
+    .navContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pageNumber {
+        display: block;
+        font-weight: lighter;
+        color: gray;
+    }
+    .backArrow img {
+        width: 50%;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .logo2 {
+        display: block;
+        width: 2px;
+    }
+    .underline::after {
+         display: block;
+         content: '';
+         width: 80%;
+         height: 0px;
+         background: black;
+         position: absolute;
+         bottom: -7px;
+         left: 0;
+         margin-left: 20px;
+       }
+       .ramAndMemory {
+        flex-direction: column;
+    }
+    .pictureUploadDiv {
+        width: 100%;
+    }
+    .uploadBtn {
+        width: 35%;
+    }
+    form {
+        width: 100%;
+    }
+    .nameAndBrand {
+        display: block;
+    }
+    /* .laptopName {
+        width: 100%;
+    } */
+    .nameAndBrand select {
+        width: 100%;
+    }
+    /* .deviceNameInput {
+        width: 100%;
+    } */
+    .cpuBrandDiv {
+        flex-direction: column;
+        align-items: normal;
+        /* border: 2px solid black; */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding-top: 10px;
+        margin-top: 20px;
+    }
+    .dateAndPrice {
+        flex-direction: column;
+        /* border: 1px solid black; */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    form {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px 140px;
+    }
+    .nameAndBrand select {
+        width: 30%;
+    }
+    .laptopName {
+        width: 45%;
+    }
+}
+
+
+
+
+
+/*-----giorgas zolebi-----*/
+@media screen and (max-width: 700px) {
+    form {
+        background-color:  #F7F7F7;
+    }
+    .sectionDiv {
+        background-color: #fff;
+    }
 }

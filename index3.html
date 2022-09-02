@@ -9,73 +9,129 @@
     <link rel="stylesheet" href="css/styles3.css" />
   </head>
   <body>
-    <!--------------- header ------------->
+<!--------------- header ------------->
+
     <header>
       <figure class="backArrow">
-        <img src="images/surati2.png" alt="" />
+        <img src="images/surati2.png" alt="" class="logo1" />
+        <img src="images/surati22.png" alt="" class="logo2" />
       </figure>
       <div class="navContainer">
         <span>თანამშრომლის ინფო</span>
-        <span>ლეპტოპის მახასიათებლები</span>
+        <span class="underline">ლეპტოპის მახასიათებლები</span>
         <span class="pageNumber">2/2</span>
       </div>
     </header>
-    <!--------------- main ------------->
+<!--------------- main ------------->
+
     <main>
       <form action="">
+        <div class="sectionDiv">
         <div class="pictureUploadDiv">
-          <a href=""><label for=""
-            >ჩააგდე ან ატვირთე <br />
-            ლეპტოპის ფოტო</label
-          ></a>
-          <button class="uploadBtn">ატვირთე</button></div>
-    <!------------ laptom name & brand --------------->
+          <a href="">
+            <label for="uploadBtn"> ჩააგდე ან ატვირთე <br/>ლეპტოპის ფოტო</label>
+          </a>
+          <button class="uploadBtn">ატვირთე</button>
+          <input type="file" id="uploadBtn" class="uploadPic">
+        </div>
+<!------------ laptom name & brand --------------->
+
         <div class="nameAndBrand">
           <div class="laptopName">
-          <label for="">ლეპტოპის სახელი</label>
-          <input placeholder="HP" class="deviceNameInput" />
-          <span>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+            <label for="">ლეპტოპის სახელი</label>
+            <input placeholder="HP" class="deviceNameInput" />
+            <span>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+          </div>
+          <select name="" id="" style="margin-top: 48px">
+            <option value="">ლეპტოპის ბრენდი</option></select>
         </div>
-          <select name="" id="" style="margin-top: 48px;">
-            <option value="">ლეპტოპის ბრენდი</option>
-          </select>
-        </div>
-<hr style='margin-top: 50px; height:2px;width: 100%; background:lightgray'/>
+      </div>
+        <hr
+          style="
+            margin-top: 50px;
+            height: 2px;
+            width: 100%;
+            background: lightgray;
+          "
+        />
 <!--------------- cpu core & flow ----------------->
+
+<div class="sectionDiv">
         <div class="cpuBrandDiv">
           <select name="" id="" class="cpuSelect">
             <option value="">CPU</option>
           </select>
           <div class="cpuCoreCount">
             <label for="">CPU-ს ბირთვი</label>
-            <input placeholder="HP" class="deviceNameInput" />
+            <input placeholder="14" class="deviceNameInput" />
             <span>მხოლოდ ციფრები</span>
           </div>
           <div class="cpuFlow">
             <label for="">CPU-ს ნაკადი</label>
-            <input placeholder="HP" class="deviceNameInput" />
+            <input placeholder="365" class="deviceNameInput" />
             <span>მხოლოდ ციფრები</span>
           </div>
         </div>
-        <!-----------------laptom ram & memory--------------->
-      <div class="ramAndMemory">
-        <div class="laptopRam">
-          <label for="">CPU-ს ბირთვი</label>
-          <input placeholder="HP" class="deviceNameInput" />
-          <span>მხოლოდ ციფრები</span>
-        </div>
-        <div class="memoryType">
-          <label for="">მეხსიერების ტიპი</label>
-          <input type="radio" id="SSD" name="fav_language" value="SSD">
-          <label for="SSD">SSD</label>
-          <input type="radio" id="HDD" name="fav_language" value="HDD">
-          <label for="HDD">HDD</label>
+<!-----------------laptom ram & memory--------------->
+
+        <div class="ramAndMemory">
+          <div class="laptopRam">
+            <label for="">ლეპტოპის RAM (GB)</label>
+            <input placeholder="16" class="laptopRamInput" />
+            <span>მხოლოდ ციფრები</span>
+          </div>
+          <div class="memoryType">
+            <label for="" class="memoryTypeLabel">მეხსიერების ტიპი</label>
+            <input type="radio" id="SSD" name="fav_language" value="SSD" />
+            <label for="SSD">SSD</label>
+            <input type="radio" id="HDD" name="fav_language" value="HDD" class="radioBtnTwo"/>
+            <label for="HDD">HDD</label>
+          </div>
         </div>
       </div>
+        <hr
+        style="
+          margin-top: 50px;
+          height: 2px;
+          width: 100%;
+          background: lightgray;
+        "
+      />
+<!--------------purchase date&price-------------->
+
+<div class="sectionDiv thirdDiv" >
+        <div class="dateAndPrice">
+          <div class="purchaseDate">
+            <label for="">შეძენის რიცხვი (არჩევითი)</label>
+            <input type="text" placeholder="დდ / თთ / წწწწ"/>
+          </div>
+          <div class="laptopPrice">
+            <label for="">ლეპტოპის ფასი</label>
+            <input placeholder="0000" class="deviceNameInput" />
+            <span>მხოლოდ ციფრები</span>
+          </div>
+        </div>     
+<!---------------laptop status(new&used)------------>
+
+
+        <div class="laptopStatus">
+          <label for="" class="laptopStatusLabel">ლეპტოპის მდგომარეობა</label>
+          <input type="radio" id="fresh" name="fav_button" />
+          <label for="fresh">ახალი</label>
+          <input type="radio" id="used" name="fav_button"  class="usedLaptopRadioBtn"/>
+          <label for="used">მეორადი</label>
+        </div>
+<!--------------back & save--------------->
+
+          <div class="backAndSave">
+            <button class="backBtn">უკან</button>
+            <button class="saveBtn">დამახსოვრება</button>
+          </div>
+        </div>
       </form>
     </main>
-    <!-- <figure class="logoFigure">
+    <figure class="logoFigure">
       <img src="images/LOGO.png" alt="" class="logoImage">
-    </figure> -->
+    </figure>
   </body>
 </html>

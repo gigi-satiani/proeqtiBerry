@@ -3,46 +3,69 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    width: 100%;
-    /* border: 1px solid red; */
-}
-.mainDiv {
-    width: 100%;
-    /* border: 1px solid rgb(51, 194, 26); */
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.mainDiv h2 {
-    color: red;
-    font-weight: bolder;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 21px;
-    margin-top: 50px;
+.redberryLogo {
+    /* border: 1px solid red; */
+    text-align: center;
 }
-.mainDiv figure {
+.redberryLogo img {
+    margin-top: 40px;
+}
+.mainImg {
+    /* border: 1px solid green; */
+    text-align: center;
     width: 40%;
-    margin-top: 50px;
-    /* border: 4px solid green; */
 }
-.mainDiv figure img {
+.mainImg img {
     width: 100%;
-    border: 4px solid green;
+    margin-top: 40px;
+}
+.mainImgSmall {
+    display: none;
 }
 .buttonDiv {
-    /* border: 1px solid black; */
-    width: 350px;
+    /* border: 1px solid red; */
     display: flex;
+    width: 50%;
     flex-direction: column;
-    margin-top: 100px;
+    align-items: center;
+    gap: 20px;
+    margin-top: 70px;
 }
-.buttonDiv button {
-    background-color: rgb(75, 171, 171);
-    height: 45px;
-    margin-top: 20px;
+
+button {
+    height: 60px;
+    width: 370px;
+    background-color: #62A1EB;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #fff;
     cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 510px) {
+    .mainImgBig {
+        display: none;
+    }
+    .mainImgSmall {
+        display: block;
+    }
+    button {
+        width: 100%;
+    }
+    .buttonDiv {
+        width: 90%;
+    }
+    main {
+        gap: 70px;
+    }
+    .mainImg {
+        width: 65%;
+    }
 }

@@ -9,58 +9,70 @@
     <link rel="stylesheet" href="css/styles2.css" />
   </head>
   <body>
-    <figure class="backArrow">
-      <img src="images/surati2.png" alt="" />
-    </figure>
-    <div class="navContainer">
-      <span class="workerInfo">თანამშრომლის ინფო</span>
-      <span class="laptopInfo">ლეპტოპის მახასიათებლები</span>
-    </div>
-    <div class="userDiv">
+    <header>
+      <figure class="backArrow">
+        <img src="images/surati2.png" alt="" class="logo1" />
+        <img src="images/surati22.png" alt="" class="logo2" />
+      </figure>
+      <div class="navContainer">
+        <span class="workerInfo underline">თანამშრომლის ინფო</span>
+        <span class="laptopInfo">ლეპტოპის მახასიათებლები</span>
+        <span class="pageNumber">1/2</span>
+      </div>
+  </header>
+    <main>
       <form action="">
         <div class="parent">
-          <div class="commonInput">
-            <label for="name">სახელი</label>
-            <input placeholder="გრიშა" id="name" name="name" />
-            <span>მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
-          </div>
-          <div class="commonInput">
-            <label for="surName">გვარი</label>
-            <input placeholder="ბაგრატიონი" id="surName" name="surName" />
-            <span>მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+          <div class="nameSurname">
+             <div class="commonInput">
+               <label for="name">სახელი</label>
+               <input placeholder="გრიშა" id="name" name="name" />
+               <span>მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+             </div>
+           <div class="commonInput">
+              <label for="surName">გვარი</label>
+              <input placeholder="ბაგრატიონი" id="surName" name="surName" />
+              <span>მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+           </div>
           </div>
           <!----------select menu 1 (development team)--------->
-          <select name="" id="" class="selectTeam">
-            <option value="">თიმი</option>
-            <option value="">დეველოპმენტი</option>
-            <option value="">HR</option>
-            <option value="">გაყიდვები</option>
-            <option value="">დიზაინი</option>
-            <option value="">მარკეტინგი</option>
+          <div class="teamAndPosition">
+            <select name="" id="" class="selectTeam">
+              <option value="">თიმი</option>
+              <option value="">დეველოპმენტი</option>
+              <option value="">HR</option>
+              <option value="">გაყიდვები</option>
+              <option value="">დიზაინი</option>
+              <option value="">მარკეტინგი</option>
           </select>
 
           <!-----------select menu 2 (position)---------------->
           <select name="" id="" class="selectPos">
             <option value="">პოზიცია</option>
           </select>
-
+        </div>
           <!-----------------mail input------------------------>
-          <label for="" class="forMailLabel">მეილი</label>
-          <input name="" id="" class="selectMail"></input>
-          <span class="selectMailSpan">უნდა მთავრდებოდეს @redberry.ge - თი</span>
+        <div class="mailAndNum">
+            
+            <label for="" class="forMailLabel">მეილი</label>
+            <input name="" id="" class="selectMail"></input>
+            <span class="selectMailSpan showSpan">უნდა მთავრდებოდეს @redberry.ge - თი</span>
 
           <!--------------phone number input------------------->
-          <label for="" class="forMailLabel">ტელეფონის ნომერი</label>
-          <input name="" id="" class="selectMail"></input>
-          <span class="selectMailSpan">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს </span>
+          
+            <label for="" class="forMailLabel">ტელეფონის ნომერი</label>
+            <input name="" id="" class="selectMail"></input>
+            <span class="selectMailSpan">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს </span>
+            <span class="selectMailSpanMobile">ქართული მობ-ნომრის ფორმატი</span>
+         </div>
 
           <!---------------next page buton--------------------->
-          <button class="buttonNext">შემდეგი</button>
-        </div>
-      </form>
-    </div>
-    <figure class="logoFigure">
-      <img src="images/LOGO.png" alt="" class="logoImage">
-    </figure>
+         <button class="buttonNext">შემდეგი</button>
+      </div>
+    </form>
+  </main>
+      <figure class="logoFigure">
+        <img src="images/LOGO.png" alt="" class="logoImage">
+      </figure>
   </body>
 </html>

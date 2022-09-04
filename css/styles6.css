@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.logoTwo {
+    display: none;
+}
+.lastBackarrow {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    cursor: pointer;
+}
+hr {
+    width: 100%;
+    margin: 35px 0 35px 0;
+    border: 1px solid #A5A5A5
+}
+.laptomInfoSpan {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*----------------- main content -----------*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    column-count: 2;
+}
+.userLaptopImg {
+    width: 90%;
+}
+.userLaptopImg img {
+    width: 100%;
+}
+
+/* ----------first UL -----*/
+
+.imgAndName {
+    display: flex;
+    gap: 20px;
+}
+.firstUl {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 35px;
+    padding: 25px;
+}
+.firstUl li {
+    display: flex;
+    width: 100%;
+}
+
+/*---------- second & third UL --------*/
+
+.secondUl {
+    column-count: 2;
+    list-style-type: none;
+    line-height: 35px;
+}
+.secondUl li {
+    display: flex;
+    width: 100%;
+}
+.thirdUl {
+    column-count: 2;
+    list-style-type: none;
+    line-height: 35px;
+    margin-bottom: 60px;
+}
+li b {
+    width: 200px;
+}
+.thirdUl li {
+    display: flex;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .logoOne {
+        display: none;
+    }
+    .logoTwo {
+        display: block;
+    }
+    .lastBackarrow {
+        top: 50px;
+        left: 20px;
+    }
+    hr {
+        margin: 0;
+    }
+    .imgAndName {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main {
+        column-count: 1;
+        width: 90%;
+    }
+    .userLaptopImg {
+        width: 100%;
+    }
+    .firstUl {
+        padding: 0;
+    }
+    .secondUl, .thirdUl, .firstUl {
+        column-count: 1;
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+    .secondUl, .thirdUl, .firstUl,  li {
+        width: 100%
+    }
+    .mediaScreenDisplayNone {
+        display: none;
+    }
+}

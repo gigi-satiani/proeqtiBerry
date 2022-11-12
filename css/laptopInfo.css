@@ -1,33 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
     background-color: #F7F7F7;
 }
 /*----------------- header navigation ---------------*/
 
 .sectionDiv {
-    /* border: 2px solid red; */
-    width: 100%;
     padding: 5px 20px;
-    margin: 10px;
     border-radius: 14px;
 }
-/* form :nth-child(2) {
-    background-color: rgb(185, 7, 7);
-} */
 .thirdDiv {
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-}
-header {
-    display: flex;
-    height: 120px;
-    background-color: #F7F7F7;
 }
 .logo2 {
     display: none;
@@ -58,37 +42,9 @@ header .backArrow {
 .pageNumber {
     display: none;
 }
-.underline::after {
-    display: block;
-    content: '';
-     width: 80%;
-     height: 2px;
-     background: black;
-     position: absolute;
-     bottom: -7px;
-     left: 0;
-     margin-left: 20px;
-   }
-   
-   .underline {
-   position: relative;  
-   }
 
 /*----------------- main container. picture upload div -------------*/
 
-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #fff;
-}
 .pictureUploadDiv {
     border: 2px dashed #4386A9;
     width: 100%;
@@ -319,7 +275,10 @@ form {
     font-weight: bold;
 }
 
-
+.laptopInfoPage {
+    display: none;
+    width: 90%;
+}
 
 .laptopStatus {
     /* border: 1px solid red; */
@@ -391,7 +350,10 @@ form {
     form {
         width: 90%;
     }
-    .navContainer :nth-child(1), hr, .logoFigure, .logo1 {
+    .laptopInfoPage {
+        width: 100%;
+    }
+    .navContainer :nth-child(1), hr, .logoFigure {
         display: none;
     }
     .navContainer {
@@ -466,7 +428,7 @@ form {
     }
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
     form {
         width: 100%;
         max-width: 1200px;
@@ -478,7 +440,7 @@ form {
     .laptopName {
         width: 45%;
     }
-}
+} */
 
 
 
